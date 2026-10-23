@@ -1,0 +1,99 @@
+# Python cache/artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS/editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local environment/config files
+.env
+.env.*
+
+# Project-generated training/prediction artifacts
+**/chemprop_model_output/
+**/lightning_logs/
+**/predictions/
+**/figures/
+**/trainer_logs/
+**/checkpoints/
+
+# Model binaries and weights
+*.pt
+*.ckpt
+*.pth
+
+# Curated best-model weights are versioned intentionally in the private repo;
+# the publication data block below overrides these exceptions.
+!**/Best Model Weights/
+!**/Best Model Weights/**
+!**/Best Models/
+!**/Best Models/**
+
+# BEGIN publication data exclusions
+# Comment out this whole block when updating the private repository.
+# Raw, curated, test, and Chemprop-ready data in all prediction folders,
+# including Exodia's combined dataset. Keep only directory placeholders.
+**/Datasets/**
+!**/Datasets/
+!**/Datasets/**/
+!**/Datasets/**/.gitkeep
+
+# Shared copies and the archive at the repository root.
+/All Datasets Accessible/**
+!/All Datasets Accessible/
+!/All Datasets Accessible/**/
+!/All Datasets Accessible/**/.gitkeep
+/All Datasets Accessible.zip
+
+# Legacy vapor-pressure inputs stored outside a Datasets directory.
+/1. Vapor Pressure/Low VP Data Processing/Raw Data/**
+!/1. Vapor Pressure/Low VP Data Processing/Raw Data/
+!/1. Vapor Pressure/Low VP Data Processing/Raw Data/.gitkeep
+/1. Vapor Pressure/Low VP Data Processing/Useable Data/**
+!/1. Vapor Pressure/Low VP Data Processing/Useable Data/
+!/1. Vapor Pressure/Low VP Data Processing/Useable Data/.gitkeep
+
+# Loose data files, including future exports outside the standard folders.
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.xlsm
+*.ods
+*.npy
+*.npz
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.sdf
+*.smi
+*.smiles
+*.mol2
+
+# Derived model binaries can also reflect the excluded training data.
+**/Best Model Weights/**
+!**/Best Model Weights/
+!**/Best Model Weights/.gitkeep
+**/Best Models/**
+!**/Best Models/
+!**/Best Models/.gitkeep
+# END publication data exclusions
